@@ -1,0 +1,500 @@
+{
+    "concept": {
+        "categories": {
+            "name": "New Concept",
+            "pairs": [
+                [1,0.14286],
+                [7,1]
+            ],
+            "categories": [
+                {
+                    "name": "Number of Passengers",
+                    "pairs": [
+                        [1,0.11111,9],
+                        [9,1,0.11111],
+                        [0.11111,9,1]
+                    ]
+                },
+                {
+                    "name": "Powerplant",
+                    "pairs": [
+                        [1,0.125],
+                        [8,1]
+                    ],
+                    "categories": [
+                        {
+                            "name": "Max Power Installed",
+                            "pairs": [
+                                [1,0.14286,9],
+                                [7,1,9],
+                                [0.11111,0.11111,1]
+                            ]
+                        },
+                        {
+                            "name": "Pollutant Emissions",
+                            "pairs": [
+                                [1,4,0.11111],
+                                [0.25,1,0.11111],
+                                [9,9,1]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "designs": [
+            {
+                "name": "Helicopter"
+            },
+            {
+                "name": "Aircraft"
+            },
+            {
+                "name": "Paper Plane"
+            }
+        ]
+    },
+    "mission": {
+        "segments": [
+            {
+                "name": "A",
+                "type": "vertical_climb",
+                "energy_network": "Electric Vertical Energy Network",
+                "velocity": 5,
+                "altitude": [100,300]
+            },
+            {
+                "name": "B",
+                "type": "hover",
+                "energy_network": "Electric Vertical Energy Network",
+                "altitude": 300.0,
+                "time": 10.0 
+            },
+            {   
+                "name": "C",
+                "type": "climb",
+                "energy_network": "Fuel Energy Network @ Forward Flight",
+                "velocity": 60.0,
+                "altitude": [300.0,1500.0],
+                "angle": 5
+            },
+            {
+                "name": "D",
+                "type": "recharge_cruise",
+                "energy_network_recharge": "Recharge network",
+                "energy_network_prop": "Fuel Energy Network @ Forward Flight",
+                "velocity": 60,
+                "velocity_stall": 32,
+                "range": 500000,
+                "altitude": 1500
+            },
+            {
+                "name": "E",
+                "type": "descent",
+                "energy_network": "Fuel Energy Network @ Forward Flight",
+                "velocity": -40.0,
+                "altitude": [1500.0,300.0],
+                "angle": -5.0
+            },
+            {
+                "name": "F",
+                "type": "hold",
+                "energy_network": "Fuel Energy Network @ Forward Flight",
+                "velocity": 35,
+                "altitude": 300,
+                "time": 300
+            },
+            {
+                "name": "G",
+                "type": "hover",
+                "energy_network": "Electric Vertical Energy Network",
+                "altitude": 300,
+                "time": 10
+            },
+            {
+                "name": "H",
+                "type": "vertical_descent",
+                "energy_network": "Electric Vertical Energy Network",
+                "velocity": -4,
+                "altitude": [300,100]
+            },
+            {
+                "name": "I",
+                "type": "load_step",
+                "mass": 100.0,
+                "time": 0.0,
+                "altitude": 100.0
+            },
+            {
+                "name": "J",
+                "type": "vertical_climb",
+                "energy_network": "Electric Vertical Energy Network",
+                "velocity": 5,
+                "altitude": [100,300]
+            },
+            {
+                "name": "K",
+                "type": "hover",
+                "energy_network": "Electric Vertical Energy Network",
+                "altitude": 300.0,
+                "time": 10.0 
+            },
+            {   
+                "name": "L",
+                "type": "climb",
+                "energy_network": "Fuel Energy Network @ Forward Flight",
+                "velocity": 60.0,
+                "altitude": [300.0,1500.0],
+                "angle": 5
+            },
+            {
+                "name": "M",
+                "type": "recharge_cruise",
+                "energy_network_recharge": "Recharge network",
+                "energy_network_prop": "Fuel Energy Network @ Forward Flight",
+                "velocity": 60,
+                "velocity_stall": 32,
+                "range": 500000,
+                "altitude": 1500
+            },
+            {
+                "name": "N",
+                "type": "descent",
+                "energy_network": "Fuel Energy Network @ Forward Flight",
+                "velocity": -40.0,
+                "altitude": [1500.0,300.0],
+                "angle": -5.0
+            },
+            {
+                "name": "O",
+                "type": "hover",
+                "energy_network": "Electric Vertical Energy Network",
+                "altitude": 300,
+                "time": 10
+            },
+            {
+                "name": "P",
+                "type": "vertical_descent",
+                "energy_network": "Electric Vertical Energy Network",
+                "velocity": -4,
+                "altitude": [300,100]
+            }
+        ]
+    },
+    "vehicle": {
+        "components": [
+            {
+                "name": "VTOL Hybrid-Electric Canard",
+                "type": "aircraft.vtol_fixed_wing",
+                "mass": 0,
+                "number": 1,
+                "rotary_wing": {
+                    "lift_to_drag_ratio": 3,
+                    "equivalent_wetted_area": 0.93
+                },
+                "position": {
+                    "cg": [
+                        [1.5,0]
+                    ]
+                }
+            },
+            {
+                "name": "Passenger",
+                "type": "mass.point",
+                "mass": 100,
+                "number": 3,
+                "position": {
+                    "cg": [
+                        [5,-0.6],
+                        [1,0],
+                        [5,0.6]
+                    ]
+                }
+            },
+            {
+                "name": "Medical Equipment",
+                "type": "mass.point",
+                "mass": 100,
+                "number": 1,
+                "position": {
+                    "cg": [
+                        [6.5,0]
+                    ]
+                }
+            },
+            {
+                "name": "Empty Mass",
+                "type": "mass.empty",
+                "mass": 0,
+                "material": "composites",
+                "equation": {
+                    "type": "ax^(1+c)",
+                    "a": 0.92,
+                    "c": -0.05
+                }
+            },
+            {
+                "name": "Fuselage",
+                "type": "fuselage",
+                "interf_factor": 1.0,
+                "diameter": 2.0,
+                "length": 10.0,
+                "mass": 0,
+                "diameters": [0.5,1.5,1.8,2,2,2,2,2,2,2,2,1.75,1.5,1.25,1,0.75,0.5,0.25,0]
+            },
+            {
+                "name": "Main Wing",
+                "type": "wing.main",
+                "interf_factor": 1.0,
+                "lift_to_drag_ratio": 16,
+                "aspect_ratio": 6,
+                "span": 12,
+                "oswald_efficiency": 0.85,
+                "airfoil": {
+                    "type": "naca0015",
+                    "tc_max": 0.15,
+                    "xc_max": 0.3,
+                    "lift_slope_coefficient": 6.2,
+                    "cl_max": 2.0
+                },
+                "sweep_le": 24,
+                "taper_ratio": 0.6,
+                "mass": 0,
+                "position": {
+                    "leading_edge": 4.75
+                }
+            },
+            {
+                "name": "Canard",
+                "type": "wing.canard",
+                "interf_factor": 1.0,
+                "aspect_ratio": 9,
+                "span": 5,
+                "oswald_efficiency": 0.85,
+                "airfoil": {
+                    "type": "naca0015",
+                    "tc_max": 0.15,
+                    "xc_max": 0.3,
+                    "lift_slope_coefficient": 6.2,
+                    "cl_max": 2.0
+                    },
+                "sweep_le": 0,
+                "taper_ratio": 1,
+                "mass": 0,
+                "position": {
+                    "leading_edge": 0.4
+                            }
+            },
+            {
+                "name": "Fuel Tank",
+                "type": "energy.fuel",
+                "source_type": "jet-fuel",
+                "reserve": 0.06,
+                "mass": 0,
+                "position": {
+                    "cg": [
+                        [6,0]
+                    ]
+                }
+            },
+            {
+                "name": "Generator",
+                "type": "generator",
+                "efficiency": 0.99,
+                "mass": 0,
+                "number": 1,
+                "position": {
+                    "cg": [
+                        [9,0]
+                    ]
+                }
+            },
+            {
+                "name": "Turboshaft",
+                "type": "engine.prop",
+                "mass": 0,
+                "number": 1,
+                "max_power": 450000,
+                "position": {
+                    "cg": [
+                        [7.5,0]
+                    ]
+                }
+            },
+            {
+                "name": "Battery",
+                "type": "energy.electric",
+                "source_type": "Li-ion",
+                "efficiency": 0.9,
+                "usable_fraction": 0.80,
+                "reserve": 0.15,
+                "number_packs": {
+                    "series": 1,
+                    "parallel": 1
+                },
+                "volt": 12,
+                "mass": 0,
+                "position": {
+                    "cg": [
+                        [5,0]
+                    ]
+                },
+                "recharge_location": "BC_Canada"
+            },
+            {
+                "name": "Propeller 1",
+                "type": "driver.prop",
+                "number": 2,
+                "number_blades": 2,
+                "radius": 1.25,
+                "rotor_solidity": 0.08,
+                "induced_power_factor": 1.15,
+                "base_drag_coefficient": 0.02,
+                "tip_velocity": 200,
+                "efficiency": 0.6,
+                "coaxial": "Yes",
+                "ducted": "Yes",
+                "mass": 0,
+                "position": {
+                    "cg": {
+                        "vtol":[
+                            [6.5,-4.75],
+                            [6.5,4.75]
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "Propeller 2",
+                "type": "driver.prop",
+                "number": 4,
+                "number_blades": 2,
+                "radius": 1.0,
+                "rotor_solidity": 0.08,
+                "induced_power_factor": 1.15,
+                "base_drag_coefficient": 0.02,
+                "tip_velocity": 200,
+                "efficiency": 0.6,
+                "coaxial": "No",
+                "ducted": "No",
+                "mass": 0,
+                "position": {
+                    "cg": {
+                        "vtol":[
+                            [8.5,-2.5],
+                            [8.5,2.5],
+                            [0.5,-2.5],
+                            [0.5,2.5]
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "Electric Motor 1",
+                "type": "motor.prop",
+                "number": 2,
+                "efficiency": 0.88,
+                "mass": 0,
+                "max_power": 600000,
+                "position": {
+                    "cg": [
+                        [6.5,-4.75],
+                        [6.5,4.75]
+                    ]
+                }
+            },
+            {
+                "name": "Electric Motor 2",
+                "type": "motor.prop",
+                "number": 4,
+                "efficiency": 0.88,
+                "mass": 0,
+                "max_power": 600000,
+                "position": {
+                    "cg": [
+                        [8.5,-2.5],
+                        [8.5,2.5],
+                        [0.5,-2.5],
+                        [0.5,2.5]
+                    ]
+                }
+            }
+        ]
+    },
+    "energy": {
+        "networks": [
+            {
+                "name": "Fuel Energy Network @ Forward Flight",
+                "layout": [
+                    {
+                        "name": "Fuel Tank"
+                    },
+                    {
+                        "name": "Turboshaft",
+                        "brake_specific_fuel_consumption": 4.25e-8,
+                        "rating": 0.80
+                    },
+                    {
+                        "name": "Generator"
+                    },
+                    {
+                        "name":"Electric Motor 1",
+                        "rating": 0.8
+                    },
+                    {
+                        "name": "Propeller 1"
+                    }
+                ]
+            },
+            {
+                "name": "Electric Vertical Energy Network",
+                "layout": [
+                    {
+                        "name": "Battery"
+                    },
+                    [
+                        {
+                            "name": "Electric Motor 1",
+                            "rating": 0.8,
+                            "number": 2
+                        },
+                        {
+                            "name": "Electric Motor 2",
+                            "rating": 0.8,
+                            "number": 4
+                        }
+                    ],
+                    [
+                        {
+                            "name": "Propeller 1"
+                        },
+                        {
+                            "name": "Propeller 2"
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "Recharge network",
+                "layout": [
+                    {
+                        "name": "Fuel Tank"
+                    },
+                    {
+                        "name": "Turboshaft",
+                        "brake_specific_fuel_consumption": 2.55e-8,
+                        "efficiency": 0.75,
+                        "fuel_weight_fraction": 0.1
+                    },
+                    {
+                        "name": "Generator"
+                    },
+                    {
+                        "name": "Battery",
+                        "efficiency": 1.0
+                    }
+                ]
+            }
+        ]
+    }
+}
