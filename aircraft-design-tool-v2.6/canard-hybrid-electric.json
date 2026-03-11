@@ -218,7 +218,7 @@
                 "energy_network": "Fuel Energy Network @ Forward Flight",
                 "velocity": 60.0,
                 "altitude": [300.0,1500.0],
-                "angle": 5
+                "angle": 10
             },
             {
                 "name": "M",
