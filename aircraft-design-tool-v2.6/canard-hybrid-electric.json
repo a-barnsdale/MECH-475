@@ -156,7 +156,7 @@
                 "type": "recharge_cruise",
                 "energy_network_recharge": "Recharge network",
                 "energy_network_prop": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60,
+                "velocity": 100,
                 "velocity_stall": 32,
                 "range": 500000,
                 "altitude": 1500
@@ -216,9 +216,9 @@
                 "name": "L",
                 "type": "climb",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60.0,
+                "velocity": 60,
                 "altitude": [300.0,1500.0],
-                "angle": 5
+                "angle": 10
             },
             {
                 "name": "M",
@@ -236,7 +236,7 @@
                 "energy_network": "Fuel Energy Network @ Forward Flight",
                 "velocity": -40.0,
                 "altitude": [1500.0,300.0],
-                "angle": -5.0
+                "angle": -10
             },
             {
                 "name": "O",
@@ -387,7 +387,7 @@
                 "type": "engine.prop",
                 "mass": 0,
                 "number": 1,
-                "max_power": 450000,
+                "max_power": 750000,
                 "position": {
                     "cg": [
                         [7.5,0]
@@ -419,7 +419,7 @@
                 "type": "driver.prop",
                 "number": 2,
                 "number_blades": 2,
-                "radius": 1.25,
+                "radius": 2,
                 "rotor_solidity": 0.08,
                 "induced_power_factor": 1.15,
                 "base_drag_coefficient": 0.02,
@@ -528,12 +528,12 @@
                     [
                         {
                             "name": "Electric Motor 1",
-                            "rating": 0.8,
+                            "rating": 0.9,
                             "number": 2
                         },
                         {
                             "name": "Electric Motor 2",
-                            "rating": 0.8,
+                            "rating": 0.9,
                             "number": 4
                         }
                     ],
