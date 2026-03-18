@@ -419,7 +419,7 @@
                 "type": "driver.prop",
                 "number": 2,
                 "number_blades": 2,
-                "radius": 2,
+                "radius": 1.25,
                 "rotor_solidity": 0.08,
                 "induced_power_factor": 1.15,
                 "base_drag_coefficient": 0.02,
