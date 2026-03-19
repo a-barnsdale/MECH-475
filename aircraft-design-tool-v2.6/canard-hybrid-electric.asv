@@ -418,7 +418,7 @@
                 "name": "Propeller 1", //look on market for options
                 "type": "driver.prop",
                 "number": 2, //default
-                "number_blades": 2, //default
+                "number_blades": 4, //default
                 "radius": 1.25, //default
                 "rotor_solidity": 0.08, //default
                 "induced_power_factor": 1.15, //default

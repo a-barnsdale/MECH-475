@@ -415,19 +415,19 @@
                 "recharge_location": "BC_Canada"
             },
             {
-                "name": "Propeller 1", //look on market for options
+                "name": "Propeller 1",
                 "type": "driver.prop",
                 "number": 2, //default
-                "number_blades": 2, //default
+                "number_blades": 4, //from Marco analysis/research
                 "radius": 1.25, //default
                 "rotor_solidity": 0.08, //default
                 "induced_power_factor": 1.15, //default
                 "base_drag_coefficient": 0.02, //default
-                "tip_velocity": 200, //default
-                "efficiency": 0.6, //default
+                "tip_velocity": 248.7, //from Marco analysis/research
+                "efficiency": 0.8, //from Marco analysis/research
                 "coaxial": "Yes",
                 "ducted": "Yes",
-                "mass": 0, //default
+                "mass": 143, //from Marco analysis/research
                 "position": {
                     "cg": {
                         "vtol":[
@@ -438,19 +438,19 @@
                 }
             },
             {
-                "name": "Propeller 2", //look on market for options
+                "name": "Propeller 2",
                 "type": "driver.prop",
                 "number": 4, //default
-                "number_blades": 2, //default
+                "number_blades": 4, //from Marco analysis/research
                 "radius": 1.0, //default
                 "rotor_solidity": 0.08, //default
                 "induced_power_factor": 1.15, //default
                 "base_drag_coefficient": 0.02, //default
-                "tip_velocity": 200, //default
-                "efficiency": 0.6, //default
+                "tip_velocity": 199, //from Marco analysis/research
+                "efficiency": 0.8, //from Marco analysis/research
                 "coaxial": "No",
                 "ducted": "No",
-                "mass": 0, //default
+                "mass": 122, //from Marco analysis/research
                 "position": {
                     "cg": {
                         "vtol":[
@@ -467,8 +467,8 @@
                 "type": "motor.prop",
                 "number": 2, //default
                 "efficiency": 0.88, //default
-                "mass": 0, //default
-                "max_power": 600000, //default
+                "mass": 158, //from Louis analysis/research
+                "max_power": 600000, //given by Asher
                 "position": {
                     "cg": [
                         [6.5,-4.75], //default
@@ -481,8 +481,8 @@
                 "type": "motor.prop",
                 "number": 4, //default
                 "efficiency": 0.88, //default
-                "mass": 0, //default
-                "max_power": 600000, //default
+                "mass": 158, //from Louis analysis/research
+                "max_power": 600000, //given by Asher
                 "position": {
                     "cg": [
                         [8.5,-2.5], //default
