@@ -362,35 +362,35 @@
                 "name": "Fuel Tank",
                 "type": "energy.fuel",
                 "source_type": "jet-fuel",
-                "reserve": 0.06, //default
-                "mass": 138, //[kg] (from meeting 3 slides)
+                "reserve": 0.06, 
+                "mass": 138, 
                 "position": {
                     "cg": [
-                        [6,0] //default
+                        [6,0] 
                     ]
                 }
             },
             {
                 "name": "Generator",
                 "type": "generator",
-                "efficiency": 0.95, //google search
-                "mass": 127, //[kg] (from meeting 3 slides)
-                "number": 1, //default
+                "efficiency": 0.95, 
+                "mass": 127, 
+                "number": 1, 
                 "position": {
                     "cg": [
-                        [9,0] //default
+                        [9,0] 
                     ]
                 }
             },
             {
                 "name": "Turboshaft",
                 "type": "engine.prop",
-                "mass": 265, //[kg] (from meeting 3 slides)
-                "number": 1, //?
-                "max_power": 1000000, //[W] (from meeting 3 slides)
+                "mass": 265, 
+                "number": 1, 
+                "max_power": 1000000, 
                 "position": {
                     "cg": [
-                        [7.5,0] //default
+                        [7.5,0] 
                     ]
                 }
             },
@@ -398,18 +398,18 @@
                 "name": "Battery",
                 "type": "energy.electric",
                 "source_type": "Li-ion",
-                "efficiency": 0.9, //default
-                "usable_fraction": 0.80, //default
-                "reserve": 0.15, //default
+                "efficiency": 0.9, 
+                "usable_fraction": 0.80, 
+                "reserve": 0.15, 
                 "number_packs": {
-                    "series": 1, //?
-                    "parallel": 1 //?
+                    "series": 1,
+                    "parallel": 1 
                 },
-                "volt": 12, //?
-                "mass": 208, //[kg] (from meeting 3 slides)
+                "volt": 12, 
+                "mass": 208, 
                 "position": {
                     "cg": [
-                        [5,0] //default
+                        [5,0] 
                     ]
                 },
                 "recharge_location": "BC_Canada"
@@ -417,22 +417,22 @@
             {
                 "name": "Propeller 1",
                 "type": "driver.prop",
-                "number": 2, //default
-                "number_blades": 4, //from Marco analysis/research
-                "radius": 1.25, //default
-                "rotor_solidity": 0.08, //default
-                "induced_power_factor": 1.15, //default
-                "base_drag_coefficient": 0.02, //default
-                "tip_velocity": 248.7, //from Marco analysis/research
-                "efficiency": 0.8, //from Marco analysis/research
+                "number": 2, 
+                "number_blades": 4, 
+                "radius": 1.25, 
+                "rotor_solidity": 0.08, 
+                "induced_power_factor": 1.15, 
+                "base_drag_coefficient": 0.02, 
+                "tip_velocity": 248.7, 
+                "efficiency": 0.8, 
                 "coaxial": "Yes",
                 "ducted": "Yes",
-                "mass": 143, //from Marco analysis/research
+                "mass": 143, 
                 "position": {
                     "cg": {
                         "vtol":[
-                            [6.5,-4.75], //default
-                            [6.5,4.75] //default
+                            [6.5,-4.75], 
+                            [6.5,4.75] 
                         ]
                     }
                 }
@@ -440,55 +440,55 @@
             {
                 "name": "Propeller 2",
                 "type": "driver.prop",
-                "number": 4, //default
-                "number_blades": 4, //from Marco analysis/research
-                "radius": 1.0, //default
-                "rotor_solidity": 0.08, //default
-                "induced_power_factor": 1.15, //default
-                "base_drag_coefficient": 0.02, //default
-                "tip_velocity": 199, //from Marco analysis/research
-                "efficiency": 0.8, //from Marco analysis/research
+                "number": 4, 
+                "number_blades": 4, 
+                "radius": 1.0, 
+                "rotor_solidity": 0.08, 
+                "induced_power_factor": 1.15, 
+                "base_drag_coefficient": 0.02, 
+                "tip_velocity": 199, 
+                "efficiency": 0.8, 
                 "coaxial": "No",
                 "ducted": "No",
-                "mass": 122, //from Marco analysis/research
+                "mass": 122, 
                 "position": {
                     "cg": {
                         "vtol":[
-                            [8.5,-2.5], //default
-                            [8.5,2.5], //default
-                            [0.5,-2.5], //default
-                            [0.5,2.5] //default
+                            [8.5,-2.5], 
+                            [8.5,2.5], 
+                            [0.5,-2.5], 
+                            [0.5,2.5] 
                         ]
                     }
                 }
             },
             {
-                "name": "Electric Motor 1", //look on market for options
+                "name": "Electric Motor 1", 
                 "type": "motor.prop",
-                "number": 2, //default
-                "efficiency": 0.88, //default
-                "mass": 158, //from Louis analysis/research
-                "max_power": 600000, //given by Asher
+                "number": 2, 
+                "efficiency": 0.88, 
+                "mass": 158, 
+                "max_power": 600000, 
                 "position": {
                     "cg": [
-                        [6.5,-4.75], //default
-                        [6.5,4.75] //default
+                        [6.5,-4.75], 
+                        [6.5,4.75] 
                     ]
                 }
             },
             {
-                "name": "Electric Motor 2", //look on market for options
+                "name": "Electric Motor 2", 
                 "type": "motor.prop",
-                "number": 4, //default
-                "efficiency": 0.88, //default
-                "mass": 158, //from Louis analysis/research
-                "max_power": 600000, //given by Asher
+                "number": 4, 
+                "efficiency": 0.88, 
+                "mass": 158, 
+                "max_power": 600000, 
                 "position": {
                     "cg": [
-                        [8.5,-2.5], //default
-                        [8.5,2.5], //default
-                        [0.5,-2.5], //default
-                        [0.5,2.5] //default
+                        [8.5,-2.5], 
+                        [8.5,2.5], 
+                        [0.5,-2.5], 
+                        [0.5,2.5] 
                     ]
                 }
             }
@@ -504,15 +504,15 @@
                     },
                     {
                         "name": "Turboshaft",
-                        "brake_specific_fuel_consumption": 4.25e-8, //default
-                        "rating": 0.80 //default
+                        "brake_specific_fuel_consumption": 4.25e-8, 
+                        "rating": 0.80 
                     },
                     {
                         "name": "Generator"
                     },
                     {
                         "name":"Electric Motor 1",
-                        "rating": 0.8 //default
+                        "rating": 0.8 
                     },
                     {
                         "name": "Propeller 1"
@@ -528,13 +528,13 @@
                     [
                         {
                             "name": "Electric Motor 1",
-                            "rating": 0.8, //default
-                            "number": 2 //default
+                            "rating": 0.8, 
+                            "number": 2 
                         },
                         {
                             "name": "Electric Motor 2",
-                            "rating": 0.8, //default
-                            "number": 4 //default
+                            "rating": 0.8, 
+                            "number": 4 
                         }
                     ],
                     [
@@ -555,7 +555,7 @@
                     },
                     {
                         "name": "Turboshaft",
-                        "brake_specific_fuel_consumption": 2.55e-8, //default
+                        "brake_specific_fuel_consumption": 2.55e-8, 
                         "efficiency": 0.75, 
                         "fuel_weight_fraction": 0.1 
                     },
