@@ -556,15 +556,15 @@
                     {
                         "name": "Turboshaft",
                         "brake_specific_fuel_consumption": 2.55e-8, //default
-                        "efficiency": 0.75, //default
-                        "fuel_weight_fraction": 0.1 //default
+                        "efficiency": 0.75, 
+                        "fuel_weight_fraction": 0.1 
                     },
                     {
                         "name": "Generator"
                     },
                     {
                         "name": "Battery",
-                        "efficiency": 1.0 //default
+                        "efficiency": 1.0 
                     }
                 ]
             }
