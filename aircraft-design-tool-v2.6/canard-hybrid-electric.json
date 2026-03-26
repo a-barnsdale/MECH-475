@@ -156,8 +156,8 @@
                 "type": "recharge_cruise",
                 "energy_network_recharge": "Recharge network",
                 "energy_network_prop": "Fuel Energy Network @ Forward Flight",
-                "velocity": 100,
-                "velocity_stall": 32,
+                "velocity": 90,
+                "velocity_stall": 33,
                 "range": 500000,
                 "altitude": 1500
             },
@@ -225,8 +225,8 @@
                 "type": "recharge_cruise",
                 "energy_network_recharge": "Recharge network",
                 "energy_network_prop": "Fuel Energy Network @ Forward Flight",
-                "velocity": 100,
-                "velocity_stall": 32,
+                "velocity": 90,
+                "velocity_stall": 33,
                 "range": 500000,
                 "altitude": 1500
             },
@@ -302,27 +302,27 @@
                 "interf_factor": 1.0,
                 "diameter": 1.8,
                 "length": 9.0,
-                "mass": 0,
+                "mass": 300,
                 "diameters": [0.5,1.5,1.8,2,2,2,2,2,2,2,1.75,1.5,1.25,1,0.75,0.5,0.25,0]
             },
             {
                 "name": "Main Wing",
                 "type": "wing.main",
                 "interf_factor": 1.0,
-                "lift_to_drag_ratio": 16,
-                "aspect_ratio": 10.21,
-                "span": 13.20,
+                "lift_to_drag_ratio": 18,
+                "aspect_ratio": 8,
+                "span": 14,
                 "oswald_efficiency": 0.85,
                 "airfoil": {
-                    "type": "naca0015",
+                    "type": "naca65-212",
                     "tc_max": 0.12,
-                    "xc_max": 0.3,
-                    "lift_slope_coefficient": 6.2,
+                    "xc_max": 0.4,
+                    "lift_slope_coefficient": 6.3,
                     "cl_max": 2.0
                 },
                 "sweep_le": 31.06,
                 "taper_ratio": 0.16,
-                "mass": 100,
+                "mass": 150,
                 "position": {
                     "leading_edge": 4.75
                 }
@@ -331,7 +331,7 @@
                 "name": "Canard",
                 "type": "wing.canard",
                 "interf_factor": 1.0,
-                "aspect_ratio": 8.93,
+                "aspect_ratio": 9,
                 "span": 5,
                 "oswald_efficiency": 0.85,
                 "airfoil": {
@@ -343,10 +343,31 @@
                     },
                 "sweep_le": 0,
                 "taper_ratio": 1,
-                "mass": 20,
+                "mass": 50,
                 "position": {
                     "leading_edge": 0.4
                             }
+            },
+            {
+                "name": "Vertical Tail",
+                "type": "wing.vtail",
+                "interf_factor": 1.0,
+                "aspect_ratio": 5.0,
+                "half_span": 0.5,
+                "oswald_efficiency": 0.85,
+                "airfoil": {
+                    "type": "naca0015",
+                    "tc_max": 0.15,
+                    "xc_max": 0.3,
+                    "lift_slope_coefficient": 6.2,
+                    "cl_max": 2.0
+                    },
+                "sweep_le": 10.0,
+                "taper_ratio": 0.4,
+                "mass": 50,
+                "position": {
+                    "leading_edge": 7.5
+                    }
             },
             {
                 "name": "Fuel Tank",
@@ -377,7 +398,7 @@
                 "type": "engine.prop",
                 "mass": 120, 
                 "number": 1, 
-                "max_power": 1000000, 
+                "max_power": 350000, 
                 "position": {
                     "cg": [
                         [7.5,0] 
@@ -408,14 +429,14 @@
                 "name": "Propeller 1",
                 "type": "driver.prop",
                 "number": 2, 
-                "number_blades": 4, 
+                "number_blades": 3, 
                 "radius": 1.25, 
                 "rotor_solidity": 0.08, 
                 "induced_power_factor": 1.15, 
                 "base_drag_coefficient": 0.02, 
-                "tip_velocity": 248.7, 
+                "tip_velocity":180, 
                 "efficiency": 0.8, 
-                "coaxial": "Yes",
+                "coaxial": "No",
                 "ducted": "Yes",
                 "mass": 143, 
                 "position": {
@@ -431,15 +452,15 @@
                 "name": "Propeller 2",
                 "type": "driver.prop",
                 "number": 4, 
-                "number_blades": 4, 
+                "number_blades": 3, 
                 "radius": 1.0, 
                 "rotor_solidity": 0.08, 
                 "induced_power_factor": 1.15, 
                 "base_drag_coefficient": 0.02, 
-                "tip_velocity": 199, 
+                "tip_velocity": 180, 
                 "efficiency": 0.8, 
                 "coaxial": "No",
-                "ducted": "No",
+                "ducted": "Yes",
                 "mass": 122, 
                 "position": {
                     "cg": {
@@ -495,7 +516,7 @@
                     {
                         "name": "Turboshaft",
                         "brake_specific_fuel_consumption": 4.25e-8, 
-                        "rating": 0.80 
+                        "rating": 0.85 
                     },
                     {
                         "name": "Generator"
