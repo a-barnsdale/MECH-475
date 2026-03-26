@@ -147,17 +147,17 @@
                 "name": "C",
                 "type": "climb",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60.0,
+                "velocity": 40,
                 "altitude": [300.0,1500.0],
-                "angle": 5
+                "angle": 2
             },
             {
                 "name": "D",
                 "type": "recharge_cruise",
                 "energy_network_recharge": "Recharge network",
                 "energy_network_prop": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60,
-                "velocity_stall": 32,
+                "velocity": 90,
+                "velocity_stall": 33,
                 "range": 500000,
                 "altitude": 1500
             },
@@ -173,7 +173,7 @@
                 "name": "F",
                 "type": "hold",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 35,
+                "velocity": 40,
                 "altitude": 300,
                 "time": 300
             },
@@ -182,7 +182,7 @@
                 "type": "hover",
                 "energy_network": "Electric Vertical Energy Network",
                 "altitude": 300,
-                "time": 10
+                "time":10.0 
             },
             {
                 "name": "H",
@@ -216,17 +216,17 @@
                 "name": "L",
                 "type": "climb",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60.0,
+                "velocity": 40,
                 "altitude": [300.0,1500.0],
-                "angle": 5
+                "angle": 2
             },
             {
                 "name": "M",
                 "type": "recharge_cruise",
                 "energy_network_recharge": "Recharge network",
                 "energy_network_prop": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60,
-                "velocity_stall": 32,
+                "velocity": 90,
+                "velocity_stall": 33,
                 "range": 500000,
                 "altitude": 1500
             },
@@ -295,44 +295,34 @@
                     ]
                 }
             },
-            {
-                "name": "Empty Mass",
-                "type": "mass.empty",
-                "mass": 0,
-                "material": "composites",
-                "equation": {
-                    "type": "ax^(1+c)",
-                    "a": 0.92,
-                    "c": -0.05
-                }
-            },
+          
             {
                 "name": "Fuselage",
                 "type": "fuselage",
                 "interf_factor": 1.0,
-                "diameter": 2.0,
-                "length": 10.0,
-                "mass": 0,
+                "diameter": 1.8,
+                "length": 9.0,
+                "mass": 300,
                 "diameters": [0.5,1.5,1.8,2,2,2,2,2,2,2,1.75,1.5,1.25,1,0.75,0.5,0.25,0]
             },
             {
                 "name": "Main Wing",
                 "type": "wing.main",
                 "interf_factor": 1.0,
-                "lift_to_drag_ratio": 16,
-                "aspect_ratio": 6,
-                "span": 12,
+                "lift_to_drag_ratio": 18,
+                "aspect_ratio": 8,
+                "span": 14,
                 "oswald_efficiency": 0.85,
                 "airfoil": {
-                    "type": "naca0015",
-                    "tc_max": 0.15,
-                    "xc_max": 0.3,
-                    "lift_slope_coefficient": 6.2,
+                    "type": "naca65-212",
+                    "tc_max": 0.12,
+                    "xc_max": 0.4,
+                    "lift_slope_coefficient": 6.3,
                     "cl_max": 2.0
                 },
-                "sweep_le": 24,
-                "taper_ratio": 0.6,
-                "mass": 0,
+                "sweep_le": 31.06,
+                "taper_ratio": 0.16,
+                "mass": 150,
                 "position": {
                     "leading_edge": 4.75
                 }
@@ -353,44 +343,65 @@
                     },
                 "sweep_le": 0,
                 "taper_ratio": 1,
-                "mass": 0,
+                "mass": 50,
                 "position": {
                     "leading_edge": 0.4
                             }
             },
             {
+                "name": "Vertical Tail",
+                "type": "wing.vtail",
+                "interf_factor": 1.0,
+                "aspect_ratio": 5.0,
+                "half_span": 0.5,
+                "oswald_efficiency": 0.85,
+                "airfoil": {
+                    "type": "naca0015",
+                    "tc_max": 0.15,
+                    "xc_max": 0.3,
+                    "lift_slope_coefficient": 6.2,
+                    "cl_max": 2.0
+                    },
+                "sweep_le": 10.0,
+                "taper_ratio": 0.4,
+                "mass": 50,
+                "position": {
+                    "leading_edge": 9.5
+                    }
+            },
+            {
                 "name": "Fuel Tank",
                 "type": "energy.fuel",
                 "source_type": "jet-fuel",
-                "reserve": 0.06, //default
-                "mass": 138, //[kg] (from meeting 3 slides)
+                "reserve": 0.06, 
+                "mass": 138, 
                 "position": {
                     "cg": [
-                        [6,0] //default
+                        [6,0] 
                     ]
                 }
             },
             {
                 "name": "Generator",
                 "type": "generator",
-                "efficiency": 0.95, //google search
-                "mass": 127, //[kg] (from meeting 3 slides)
-                "number": 1, //default
+                "efficiency": 0.95, 
+                "mass": 38, 
+                "number": 1, 
                 "position": {
                     "cg": [
-                        [9,0] //default
+                        [9,0] 
                     ]
                 }
             },
             {
                 "name": "Turboshaft",
                 "type": "engine.prop",
-                "mass": 265, //[kg] (from meeting 3 slides)
-                "number": 1, //?
-                "max_power": 1000000, //[W] (from meeting 3 slides)
+                "mass": 120, 
+                "number": 1, 
+                "max_power": 350000, 
                 "position": {
                     "cg": [
-                        [7.5,0] //default
+                        [7.5,0] 
                     ]
                 }
             },
@@ -398,97 +409,101 @@
                 "name": "Battery",
                 "type": "energy.electric",
                 "source_type": "Li-ion",
-                "efficiency": 0.9, //default
-                "usable_fraction": 0.80, //default
-                "reserve": 0.15, //default
+                "efficiency": 0.9, 
+                "usable_fraction": 0.80, 
+                "reserve": 0.15, 
                 "number_packs": {
-                    "series": 1, //?
-                    "parallel": 1 //?
+                    "series": 222,
+                    "parallel": 8 
                 },
-                "volt": 12, //?
-                "mass": 208, //[kg] (from meeting 3 slides)
+                "volt": 799, 
+                "mass": 180, 
                 "position": {
                     "cg": [
-                        [5,0] //default
+                        [5,0] 
                     ]
                 },
                 "recharge_location": "BC_Canada"
             },
             {
-                "name": "Propeller 1", //look on market for options
+                "name": "Propeller 1",
                 "type": "driver.prop",
-                "number": 2, //default
-                "number_blades": 4, //default
-                "radius": 1.25, //default
-                "rotor_solidity": 0.08, //default
-                "induced_power_factor": 1.15, //default
-                "base_drag_coefficient": 0.02, //default
-                "tip_velocity": 200, //default
-                "efficiency": 0.6, //default
-                "coaxial": "Yes",
-                "ducted": "Yes",
-                "mass": 0, //default
-                "position": {
-                    "cg": {
-                        "vtol":[
-                            [6.5,-4.75], //default
-                            [6.5,4.75] //default
-                        ]
-                    }
-                }
-            },
-            {
-                "name": "Propeller 2", //look on market for options
-                "type": "driver.prop",
-                "number": 4, //default
-                "number_blades": 2, //default
-                "radius": 1.0, //default
-                "rotor_solidity": 0.08, //default
-                "induced_power_factor": 1.15, //default
-                "base_drag_coefficient": 0.02, //default
-                "tip_velocity": 200, //default
-                "efficiency": 0.6, //default
+                "number": 4, 
+                "number_blades": 3, 
+                "radius": 1.25, 
+                "rotor_solidity": 0.08, 
+                "induced_power_factor": 1.15, 
+                "base_drag_coefficient": 0.02, 
+                "tip_velocity":180, 
+                "efficiency": 0.8, 
                 "coaxial": "No",
-                "ducted": "No",
-                "mass": 0, //default
+                "ducted": "Yes",
+                "mass": 30, 
                 "position": {
                     "cg": {
                         "vtol":[
-                            [8.5,-2.5], //default
-                            [8.5,2.5], //default
-                            [0.5,-2.5], //default
-                            [0.5,2.5] //default
+                            [7.5,-6], 
+                            [7.5,6],
+                            [5,-3],
+                            [5,3]
                         ]
                     }
                 }
             },
             {
-                "name": "Electric Motor 1", //look on market for options
+                "name": "Propeller 2",
+                "type": "driver.prop",
+                "number": 4, 
+                "number_blades": 3, 
+                "radius": 1.0, 
+                "rotor_solidity": 0.08, 
+                "induced_power_factor": 1.15, 
+                "base_drag_coefficient": 0.02, 
+                "tip_velocity": 180, 
+                "efficiency": 0.8, 
+                "coaxial": "No",
+                "ducted": "Yes",
+                "mass": 20, 
+                "position": {
+                    "cg": {
+                        "vtol":[
+                            [8.5,-2.5], 
+                            [8.5,2.5], 
+                            [0.5,-2.5], 
+                            [0.5,2.5] 
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "Electric Motor 1", 
                 "type": "motor.prop",
-                "number": 2, //default
-                "efficiency": 0.88, //default
-                "mass": 0, //default
-                "max_power": 600000, //default
+                "number": 4, 
+                "efficiency": 0.88, 
+                "mass": 38 , 
+                "max_power": 170000, 
                 "position": {
                     "cg": [
-                        [6.5,-4.75], //default
-                        [6.5,4.75] //default
+                        [5,-3], 
+                        [5,3],
+                        [7.5,6],
+                        [7.5,-6]
                     ]
                 }
             },
             {
-                "name": "Electric Motor 2", //look on market for options
+                "name": "Electric Motor 2", 
                 "type": "motor.prop",
-                "number": 4, //default
-                "efficiency": 0.88, //default
-                "mass": 0, //default
-                "max_power": 600000, //default
+                "number": 4, 
+                "efficiency": 0.88, 
+                "mass": 43, 
+                "max_power": 120000, 
                 "position": {
                     "cg": [
-                        [8.5,-2.5], //default
-                        [8.5,2.5], //default
-                        [0.5,-2.5], //default
-                        [0.5,2.5] //default
+                        [8.5,-2.5],     
+                        [8.5,2.5], 
+                        [0.5,-2.5], 
+                        [0.5,2.5] 
                     ]
                 }
             }
@@ -504,15 +519,15 @@
                     },
                     {
                         "name": "Turboshaft",
-                        "brake_specific_fuel_consumption": 4.25e-8, //default
-                        "rating": 0.80 //default
+                        "brake_specific_fuel_consumption": 4.25e-8, 
+                        "rating": 0.85 
                     },
                     {
                         "name": "Generator"
                     },
                     {
                         "name":"Electric Motor 1",
-                        "rating": 0.8 //default
+                        "rating": 0.8 
                     },
                     {
                         "name": "Propeller 1"
@@ -528,13 +543,13 @@
                     [
                         {
                             "name": "Electric Motor 1",
-                            "rating": 0.8, //default
-                            "number": 2 //default
+                            "rating": 0.90, 
+                            "number": 2 
                         },
                         {
                             "name": "Electric Motor 2",
-                            "rating": 0.8, //default
-                            "number": 4 //default
+                            "rating": 0.90, 
+                            "number": 4 
                         }
                     ],
                     [
@@ -555,16 +570,16 @@
                     },
                     {
                         "name": "Turboshaft",
-                        "brake_specific_fuel_consumption": 2.55e-8, //default
-                        "efficiency": 0.75, //default
-                        "fuel_weight_fraction": 0.1 //default
+                        "brake_specific_fuel_consumption": 2.55e-8, 
+                        "efficiency": 0.75, 
+                        "fuel_weight_fraction": 0.1 
                     },
                     {
                         "name": "Generator"
                     },
                     {
                         "name": "Battery",
-                        "efficiency": 1.0 //default
+                        "efficiency": 1.0 
                     }
                 ]
             }
