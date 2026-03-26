@@ -295,17 +295,7 @@
                     ]
                 }
             },
-            {
-                "name": "Empty Mass",
-                "type": "mass.empty",
-                "mass": 0,
-                "material": "composites",
-                "equation": {
-                    "type": "ax^(1+c)",
-                    "a": 0.92,
-                    "c": -0.05
-                }
-            },
+          
             {
                 "name": "Fuselage",
                 "type": "fuselage",
