@@ -366,7 +366,7 @@
                 "taper_ratio": 0.4,
                 "mass": 50,
                 "position": {
-                    "leading_edge": 7.5
+                    "leading_edge": 9.5
                     }
             },
             {
@@ -428,7 +428,7 @@
             {
                 "name": "Propeller 1",
                 "type": "driver.prop",
-                "number": 2, 
+                "number": 4, 
                 "number_blades": 3, 
                 "radius": 1.25, 
                 "rotor_solidity": 0.08, 
@@ -438,12 +438,14 @@
                 "efficiency": 0.8, 
                 "coaxial": "No",
                 "ducted": "Yes",
-                "mass": 143, 
+                "mass": 30, 
                 "position": {
                     "cg": {
                         "vtol":[
-                            [6.5,-4.75], 
-                            [6.5,4.75] 
+                            [7.5,-6], 
+                            [7.5,6],
+                            [5,-3],
+                            [5,3]
                         ]
                     }
                 }
@@ -461,7 +463,7 @@
                 "efficiency": 0.8, 
                 "coaxial": "No",
                 "ducted": "Yes",
-                "mass": 122, 
+                "mass": 20, 
                 "position": {
                     "cg": {
                         "vtol":[
@@ -476,14 +478,16 @@
             {
                 "name": "Electric Motor 1", 
                 "type": "motor.prop",
-                "number": 2, 
+                "number": 4, 
                 "efficiency": 0.88, 
                 "mass": 25, 
-                "max_power": 450000, 
+                "max_power": 250000, 
                 "position": {
                     "cg": [
-                        [6.5,-4.75], 
-                        [6.5,4.75] 
+                        [5,-3], 
+                        [5,3],
+                        [7.5,6],
+                        [7.5,-6]
                     ]
                 }
             },
@@ -493,7 +497,7 @@
                 "number": 4, 
                 "efficiency": 0.88, 
                 "mass": 34, 
-                "max_power": 450000, 
+                "max_power": 250000, 
                 "position": {
                     "cg": [
                         [8.5,-2.5],     
