@@ -182,7 +182,7 @@
                 "type": "hover",
                 "energy_network": "Electric Vertical Energy Network",
                 "altitude": 300,
-                "time": 10
+                "time":10.0 
             },
             {
                 "name": "H",
@@ -364,7 +364,7 @@
                 "name": "Generator",
                 "type": "generator",
                 "efficiency": 0.95, 
-                "mass": 127, 
+                "mass": 38, 
                 "number": 1, 
                 "position": {
                     "cg": [
@@ -375,7 +375,7 @@
             {
                 "name": "Turboshaft",
                 "type": "engine.prop",
-                "mass": 265, 
+                "mass": 120, 
                 "number": 1, 
                 "max_power": 1000000, 
                 "position": {
@@ -458,7 +458,7 @@
                 "number": 2, 
                 "efficiency": 0.88, 
                 "mass": 25, 
-                "max_power": 125000, 
+                "max_power": 450000, 
                 "position": {
                     "cg": [
                         [6.5,-4.75], 
@@ -472,7 +472,7 @@
                 "number": 4, 
                 "efficiency": 0.88, 
                 "mass": 34, 
-                "max_power": 162000, 
+                "max_power": 450000, 
                 "position": {
                     "cg": [
                         [8.5,-2.5],     
@@ -518,12 +518,12 @@
                     [
                         {
                             "name": "Electric Motor 1",
-                            "rating": 0.8, 
+                            "rating": 0.90, 
                             "number": 2 
                         },
                         {
                             "name": "Electric Motor 2",
-                            "rating": 0.8, 
+                            "rating": 0.90, 
                             "number": 4 
                         }
                     ],
