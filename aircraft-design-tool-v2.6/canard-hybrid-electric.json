@@ -156,7 +156,7 @@
                 "type": "recharge_cruise",
                 "energy_network_recharge": "Recharge network",
                 "energy_network_prop": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60,
+                "velocity": 100,
                 "velocity_stall": 32,
                 "range": 500000,
                 "altitude": 1500
@@ -173,7 +173,7 @@
                 "name": "F",
                 "type": "hold",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 35,
+                "velocity": 40,
                 "altitude": 300,
                 "time": 300
             },
@@ -216,7 +216,7 @@
                 "name": "L",
                 "type": "climb",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 100,
+                "velocity": 60,
                 "altitude": [300.0,1500.0],
                 "angle": 5
             },
@@ -300,8 +300,8 @@
                 "name": "Fuselage",
                 "type": "fuselage",
                 "interf_factor": 1.0,
-                "diameter": 2.0,
-                "length": 10.0,
+                "diameter": 1.8,
+                "length": 9.0,
                 "mass": 0,
                 "diameters": [0.5,1.5,1.8,2,2,2,2,2,2,2,1.75,1.5,1.25,1,0.75,0.5,0.25,0]
             },
@@ -458,7 +458,7 @@
                 "number": 2, 
                 "efficiency": 0.88, 
                 "mass": 53.5, 
-                "max_power": 200000, 
+                "max_power": 105000, 
                 "position": {
                     "cg": [
                         [6.5,-4.75], 
@@ -472,7 +472,7 @@
                 "number": 4, 
                 "efficiency": 0.88, 
                 "mass": 53.5, 
-                "max_power": 200000, 
+                "max_power": 112000, 
                 "position": {
                     "cg": [
                         [8.5,-2.5],     
