@@ -147,9 +147,9 @@
                 "name": "C",
                 "type": "climb",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60.0,
+                "velocity": 40,
                 "altitude": [300.0,1500.0],
-                "angle": 5
+                "angle": 2
             },
             {
                 "name": "D",
@@ -216,9 +216,9 @@
                 "name": "L",
                 "type": "climb",
                 "energy_network": "Fuel Energy Network @ Forward Flight",
-                "velocity": 60,
+                "velocity": 40,
                 "altitude": [300.0,1500.0],
-                "angle": 5
+                "angle": 2
             },
             {
                 "name": "M",
@@ -457,8 +457,8 @@
                 "type": "motor.prop",
                 "number": 2, 
                 "efficiency": 0.88, 
-                "mass": 23, 
-                "max_power": 105000, 
+                "mass": 25, 
+                "max_power": 125000, 
                 "position": {
                     "cg": [
                         [6.5,-4.75], 
@@ -471,8 +471,8 @@
                 "type": "motor.prop",
                 "number": 4, 
                 "efficiency": 0.88, 
-                "mass": 23, 
-                "max_power": 112000, 
+                "mass": 34, 
+                "max_power": 162000, 
                 "position": {
                     "cg": [
                         [8.5,-2.5],     
