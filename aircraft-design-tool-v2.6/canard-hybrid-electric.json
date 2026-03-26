@@ -457,7 +457,7 @@
                 "type": "motor.prop",
                 "number": 2, 
                 "efficiency": 0.88, 
-                "mass": 53.5, 
+                "mass": 23, 
                 "max_power": 105000, 
                 "position": {
                     "cg": [
@@ -471,7 +471,7 @@
                 "type": "motor.prop",
                 "number": 4, 
                 "efficiency": 0.88, 
-                "mass": 53.5, 
+                "mass": 23, 
                 "max_power": 112000, 
                 "position": {
                     "cg": [
