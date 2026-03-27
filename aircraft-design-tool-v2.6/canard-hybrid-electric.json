@@ -436,7 +436,7 @@
                 "base_drag_coefficient": 0.02, 
                 "tip_velocity":180, 
                 "efficiency": 0.8, 
-                "coaxial": "YES",
+                "coaxial": "no",
                 "ducted": "Yes",
                 "mass": 33, 
                 "position": {
