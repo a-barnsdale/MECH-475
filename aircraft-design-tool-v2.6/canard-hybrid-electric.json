@@ -490,7 +490,7 @@
                         [7.5,-6]
                     ]
                 }
-            },
+            }, 
             {
                 "name": "Electric Motor 2", 
                 "type": "motor.prop",
