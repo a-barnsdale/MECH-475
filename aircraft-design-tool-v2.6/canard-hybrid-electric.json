@@ -497,7 +497,7 @@
                 "number": 4, 
                 "efficiency": 0.88, 
                 "mass": 43, 
-                "max_power": 120000,  
+                "max_power": 120000, 
                 "position": {
                     "cg": [
                         [8.5,-2.5],     
